@@ -1,0 +1,19 @@
+.Genre {
+    color: var(--text-color);
+    width: 25%;
+    margin: 20px;
+    padding: 5px;
+
+}
+
+.Genre p {
+    font-size: 34px;
+    text-align: center;
+    border-bottom: 1px solid var(--background);
+}
+
+.Genre p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--btn-color);
+    color: var(--btn-color);
+}

@@ -1,0 +1,19 @@
+.Genres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Genres__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    margin: 10% 0 5% 0;
+    font-size: 34px;
+    color: var(--btn-color);
+}

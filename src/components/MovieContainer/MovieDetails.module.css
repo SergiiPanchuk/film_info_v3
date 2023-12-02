@@ -1,0 +1,80 @@
+.MovieDetails {
+    display: flex;
+    padding: 0 50px;
+}
+
+.details__img {
+    width: 30%;
+}
+
+.details__img img {
+    width: 352px;
+    height: 576px;
+}
+
+.details__info {
+    width: 70%;
+}
+
+div p {
+    font-size: 16px;
+    font-family: var(--font-overview);
+    color: var(--text-color);
+}
+
+.details__info_title {
+    font-size: 34px;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin-bottom: 65px;
+}
+
+.details__info_overview {
+    font-size: 16px;
+    font-family: var(--font-overview);
+    color: var(--text-color);
+    max-width: 708px;
+    line-height: 1.4;
+    margin-bottom: 44px;
+}
+
+.details__info_genre {
+    margin: 24px 0;
+    display: flex;
+}
+
+.details__info_genre ul {
+    margin: 0 18px 0 0;
+}
+
+.details__info_genre div {
+    display: flex;
+    color: var(--text-color);
+    align-items: center;
+    margin-right: 28px;
+}
+
+.details__info_genre div img {
+    margin: 0 10px 0 0;
+}
+
+.details__info_genre ul li {
+    display: inline;
+    font-size: 16px;
+    font-family: var(--font-overview);
+    color: var(--background);
+    padding: 10px;
+    background: var(--text-color);
+    border-radius: 10px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.more__info {
+
+}
+
+.more__info p {
+    margin-bottom: 8px;
+}
+

@@ -1,0 +1,32 @@
+.Footer {
+    height: 100px;
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    padding: 0 50px;
+}
+
+
+.Footer nav {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.Footer a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin-right: 35px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.Footer a:hover {
+    border-bottom: 5px solid var(--btn-color);
+}

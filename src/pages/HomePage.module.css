@@ -1,0 +1,19 @@
+.preview__text {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    padding: 0 50px;
+}
+
+.preview__text p, .preview__text a {
+    font-family: var(--font-family);
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.preview__text a {
+    text-decoration: none;
+}
+.preview__text a:hover {
+    color: var(--btn-color);
+}

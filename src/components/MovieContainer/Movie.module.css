@@ -1,0 +1,47 @@
+.Movie {
+    position: relative; /* Додаємо position: relative; для .Movie */
+    width: calc(20% - 10px);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Movie p {
+    color: var(--text-color);
+    margin: 20px 0 35px 0;
+    cursor: pointer;
+}
+
+.Movie p:hover {
+    color: var(--btn-color);
+}
+
+.movie__poster {
+    width: 184px;
+    height: 280px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.movie__poster:hover {
+    border: 4px solid #b73030;
+}
+
+.hover_image {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.Movie:hover .hover_image {
+    visibility: visible;
+}

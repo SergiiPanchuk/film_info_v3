@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const MovieVideo:FC<IProps> = ({title}) => {
-    const {videoId} = useAppSelector(state => state.video);
+    const {videoId, errors, loading} = useAppSelector(state => state.video);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -21,6 +21,8 @@ const MovieVideo:FC<IProps> = ({title}) => {
 
     return (
         <div className={css.MovieVideo}>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             {videoId && (
                 <iframe
                     width="760"

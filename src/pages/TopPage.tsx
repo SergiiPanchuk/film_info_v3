@@ -8,7 +8,7 @@ import {Movies} from "../components";
 
 const TopPage = () => {
     const [query, setQuery] = useSearchParams({page:'1'});
-    let {movieTop,prevPage,nextPage} = useAppSelector(state => state.movies);
+    let {movieTop,prevPage,nextPage , errors,loading} = useAppSelector(state => state.movies);
 
     const dispatch = useAppDispatch();
 
@@ -37,6 +37,8 @@ const TopPage = () => {
 
     return (
         <div>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             <p className={css.SectionHeader}>Top Movie</p>
             {movieTop && <Movies movie={movieTop.results}/>}
             <div className={css.btn__block}>

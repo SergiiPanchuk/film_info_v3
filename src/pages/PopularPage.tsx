@@ -8,7 +8,7 @@ import {movieAction} from "../redux";
 
 const PopularPage = () => {
     const [query, setQuery] = useSearchParams({page: '1'});
-    let {moviePopulate, prevPage, nextPage} = useAppSelector(state => state.movies);
+    let {moviePopulate, prevPage, nextPage, errors, loading} = useAppSelector(state => state.movies);
     const dispatch = useAppDispatch();
 
     const page = query.get('page')
@@ -36,6 +36,8 @@ const PopularPage = () => {
 
     return (
         <div>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             <p className={css.SectionHeader}>Popular Movie</p>
             {moviePopulate && <Movies movie={moviePopulate.results}/>}
             <div className={css.btn__block}>

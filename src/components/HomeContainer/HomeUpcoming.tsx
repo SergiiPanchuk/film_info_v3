@@ -24,7 +24,7 @@ const HomeUpcoming: FC<IProps> = ({upcomingMovie}) => {
 
     return (
         <div className={css.HomeUpcoming}>
-            <img src={baseImgURL + backdrop_path} alt={title} onClick={set}/>
+            <img src={baseImgURL + backdrop_path} alt={title} onClick={set} className={css.mainPoster}/>
         </div>
     );
 }

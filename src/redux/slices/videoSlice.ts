@@ -4,13 +4,17 @@ import {videoService} from "../../services";
 import {AxiosError} from "axios";
 
 interface IState {
-    youTubeRes: IVideo;
-    videoId:string;
+    youTubeRes: IVideo,
+    videoId:string,
+    errors: boolean,
+    loading:boolean
 }
 
 const initialState: IState = {
     youTubeRes: null,
-    videoId:null
+    videoId:null,
+    errors: false,
+    loading: false
 };
 
 const getVideo = createAsyncThunk<IVideo, string> (
@@ -33,6 +37,14 @@ const videoSlice = createSlice({
         builder
             .addCase(getVideo.fulfilled, (state, action)=> {
                 state.videoId = action.payload.items[0].id.videoId
+                state.errors = false
+                state.loading = false
+            })
+            .addCase(getVideo.pending, state => {
+                state.loading = true
+            })
+            .addCase(getVideo.rejected, state => {
+                state.errors = true
             })
 })
 

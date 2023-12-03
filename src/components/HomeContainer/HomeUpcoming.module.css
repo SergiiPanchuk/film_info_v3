@@ -1,5 +1,20 @@
-.HomeUpcoming  img {
+.HomeUpcoming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mainPoster {
+    box-sizing: border-box;
     width: 100%;
+    height: 80vh;
     cursor: pointer;
     margin-bottom: 20px;
+    object-fit: cover;
+    position: relative; /* Додайте це */
+}
+
+.mainPoster:hover {
+    border: 4px solid var(--border-color);
 }

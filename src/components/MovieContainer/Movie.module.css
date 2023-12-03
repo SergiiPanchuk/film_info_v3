@@ -1,5 +1,5 @@
 .Movie {
-    position: relative; /* Додаємо position: relative; для .Movie */
+    position: relative;
     width: calc(20% - 10px);
     margin-bottom: 30px;
     display: flex;
@@ -27,7 +27,7 @@
 }
 
 .movie__poster:hover {
-    border: 4px solid #b73030;
+    border: 4px solid var(--border-color);
 }
 
 .hover_image {

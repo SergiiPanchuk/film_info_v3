@@ -7,10 +7,14 @@ import {AxiosError} from "axios";
 
 interface IState {
     actors: ICast[];
+    errors: boolean,
+    loading: boolean
 }
 
 const initialState: IState = {
-    actors: null
+    actors: null,
+    errors: false,
+    loading: false
 };
 
 const getCast = createAsyncThunk<ICredits, number>(
@@ -29,18 +33,26 @@ const castSlice = createSlice({
     name: 'castSlice',
     initialState,
     reducers: {},
-    extraReducers:builder =>
+    extraReducers: builder =>
         builder
-            .addCase(getCast.fulfilled, (state, action)=> {
+            .addCase(getCast.fulfilled, (state, action) => {
                 state.actors = action.payload.cast
+                state.errors = false
+                state.loading = false
+            })
+            .addCase(getCast.pending, state => {
+                state.loading = true
+            })
+            .addCase(getCast.rejected, state => {
+                state.errors = true
             })
 
 })
 
 
-const {reducer:castReducer, actions} = castSlice;
+const {reducer: castReducer, actions} = castSlice;
 
-const castAction ={
+const castAction = {
     ...actions,
     getCast
 }

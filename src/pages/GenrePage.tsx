@@ -3,9 +3,10 @@ import {useEffect} from "react";
 
 import {genreActions} from "../redux";
 import {Genres} from "../components";
+import css from "./btnPrevNext.module.css";
 
 const GenrePage = () => {
-    const {genre} = useAppSelector(state => state.genre);
+    const {genre, errors, loading} = useAppSelector(state => state.genre);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -14,6 +15,8 @@ const GenrePage = () => {
 
     return (
         <div>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             {genre && <Genres genre={genre}/>}
         </div>
     );

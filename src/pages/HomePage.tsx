@@ -7,7 +7,7 @@ import {HomeUpcoming, PreviewMovies} from "../components/HomeContainer";
 import css from "./HomePage.module.css"
 
 const HomePage = () => {
-    const {moviePopulate,movieTop,movieUpcoming} = useAppSelector(state => state.movies);
+    const {moviePopulate,movieTop,movieUpcoming, errors, loading} = useAppSelector(state => state.movies);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -18,6 +18,8 @@ const HomePage = () => {
 
     return (
         <div className={css.HomePage}>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             {movieUpcoming && <HomeUpcoming upcomingMovie={movieUpcoming.results[0]}/>}
             <div>
                 <div className={css.preview__text}>

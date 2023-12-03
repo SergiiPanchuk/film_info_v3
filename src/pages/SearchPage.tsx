@@ -14,7 +14,7 @@ const SearchPage = () => {
     const [query, setQuery] = useSearchParams({page: '1'});
     let page: string = query.get('page');
 
-    let {movies, nextPage, prevPage} = useAppSelector(state => state.movies);
+    let {movieSearch, nextPage, prevPage ,errors, loading} = useAppSelector(state => state.movies);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -29,7 +29,7 @@ const SearchPage = () => {
     }
     const next = () => {
         setQuery((prev) => {
-            if (movies.total_pages - 1 >= +prev.get('page')) {
+            if (movieSearch.total_pages - 1 >= +prev.get('page')) {
                 prev.set('page', `${+prev.get('page') + 1}`);
                 return prev;
             } else {
@@ -40,8 +40,10 @@ const SearchPage = () => {
 
     return (
         <div>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             <p className={css.SectionHeader}>Search : {movieName}</p>
-            {movies && <Movies movie={movies.results}/>}
+            {movieSearch && <Movies movie={movieSearch.results}/>}
             <div className={css.btn__block}>
                 <button className={css.btn__prev_next} disabled={!prevPage} onClick={prev}>prev</button>
                 <button className={css.btn__prev_next} disabled={!nextPage} onClick={next}>next</button>

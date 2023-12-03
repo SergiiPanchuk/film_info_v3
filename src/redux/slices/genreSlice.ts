@@ -5,11 +5,15 @@ import {genreService} from "../../services";
 import {AxiosError} from "axios";
 
 interface IState {
-    genre: IGenre[]
+    genre: IGenre[],
+    errors: boolean,
+    loading: boolean
 }
 
 const initialState: IState = {
-    genre: null
+    genre: null,
+    errors: false,
+    loading: false
 };
 
 const getGenre = createAsyncThunk<IGenreResponse, void>(
@@ -33,6 +37,14 @@ const genreSlice = createSlice({
         builder
             .addCase(getGenre.fulfilled, (state, action) => {
                 state.genre = action.payload.genres
+                state.errors = false
+                state.loading = false
+            })
+            .addCase(getGenre.pending, state => {
+                state.loading = true
+            })
+            .addCase(getGenre.rejected, state => {
+                state.errors = true
             })
 })
 

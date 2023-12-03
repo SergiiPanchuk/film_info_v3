@@ -7,7 +7,7 @@ import {movieAction} from "../redux";
 import {Movies} from "../components";
 
 const GenreIdPage = () => {
-    let {movies, nextPage, prevPage} = useAppSelector(state => state.movies);
+    let {movieByGenre, nextPage, prevPage, errors, loading} = useAppSelector(state => state.movies);
     const dispatch = useAppDispatch();
     const [query, setQuery] = useSearchParams({page:'1'});
 
@@ -27,7 +27,7 @@ const GenreIdPage = () => {
     }
     const next = () => {
         setQuery((prev) => {
-            if (movies.total_pages - 1 >= +prev.get('page')) {
+            if (movieByGenre.total_pages - 1 >= +prev.get('page')) {
                 prev.set('page', `${+prev.get('page') + 1}`);
                 return prev;
             } else {
@@ -38,8 +38,10 @@ const GenreIdPage = () => {
 
     return (
         <div>
+            {loading && <div className={css.loading}></div>}
+            {errors && <div className={css.errors}>Errors loading</div>}
             <p className={css.SectionHeader}>{name}</p>
-            {movies && <Movies movie={movies.results}/>}
+            {movieByGenre && <Movies movie={movieByGenre.results}/>}
             <div className={css.btn__block}>
                 <button className={css.btn__prev_next} disabled={!prevPage} onClick={prev}>prev</button>
                 <button className={css.btn__prev_next} disabled={!nextPage} onClick={next}>next</button>

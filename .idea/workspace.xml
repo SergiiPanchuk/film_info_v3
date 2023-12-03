@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbec18a8-c11c-4196-8d81-18ce904577b6" name="Changes" comment="add video to project">
-      <change beforePath="$PROJECT_DIR$/src/components/HomeContainer/HomeUpcoming.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeContainer/HomeUpcoming.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomeContainer/HomeUpcoming.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeContainer/HomeUpcoming.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieContainer/Movie.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieContainer/Movie.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoContainer/MovieVideo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoContainer/MovieVideo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoContainer/MovieVideo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoContainer/MovieVideo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayouts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayouts.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/GenreIdPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GenreIdPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/GenrePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GenrePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MovieDetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MovieDetailsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PopularPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PopularPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SearchPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/UpcomingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UpcomingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/btnPrevNext.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/btnPrevNext.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/castSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/castSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/genreSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/genreSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/movieSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/movieSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/videoSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/videoSlice.ts" afterDir="false" />
+    <list default="true" id="cbec18a8-c11c-4196-8d81-18ce904577b6" name="Changes" comment="add errors and loader">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +82,7 @@
       <workItem from="1701525088200" duration="1847000" />
       <workItem from="1701526973037" duration="4521000" />
       <workItem from="1701542892840" duration="5871000" />
-      <workItem from="1701619217264" duration="5623000" />
+      <workItem from="1701619217264" duration="6387000" />
     </task>
     <task id="LOCAL-00001" summary="add video to project">
       <option name="closed" value="true" />
@@ -110,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701548197892</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add errors and loader">
+      <option name="closed" value="true" />
+      <created>1701625066073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701625066073</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +108,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add video to project" />
-    <option name="LAST_COMMIT_MESSAGE" value="add video to project" />
+    <MESSAGE value="add errors and loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="add errors and loader" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/slices/movieSlice.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
